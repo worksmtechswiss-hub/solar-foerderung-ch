@@ -487,6 +487,61 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
   margin-bottom: 14px;
 }
+.fact-icon-svg {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Fact Card Animations --- */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+@keyframes grow-bar {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.12) translateY(-2px); }
+}
+@keyframes flash-bolt {
+  0%, 80%, 100% { opacity: 1; }
+  40% { opacity: .4; }
+}
+@keyframes tick-check {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.08) rotate(2deg); }
+  75% { transform: scale(1.08) rotate(-2deg); }
+}
+@keyframes glow-light {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(251,191,36,.2)); }
+  50% { filter: drop-shadow(0 0 10px rgba(251,191,36,.5)); }
+}
+
+.anim-spin-slow svg { animation: spin-slow 12s linear infinite; }
+.anim-bounce svg { animation: bounce-gentle 2.5s ease-in-out infinite; }
+.anim-pulse svg { animation: pulse-scale 3s ease-in-out infinite; }
+.anim-grow svg { animation: grow-bar 3.5s ease-in-out infinite; }
+.anim-flash svg { animation: flash-bolt 3s ease-in-out infinite; }
+.anim-tick svg { animation: tick-check 4s ease-in-out infinite; }
+.anim-glow svg { animation: glow-light 2.5s ease-in-out infinite; }
+
+/* Pause animations when not visible (performance) */
+.fact-card:not(.animated) .fact-icon-svg svg {
+  animation-play-state: paused;
+}
+.fact-card.animated .fact-icon-svg svg {
+  animation-play-state: running;
+}
 .fact-number {
   font-size: 1.6rem;
   font-weight: 700;
