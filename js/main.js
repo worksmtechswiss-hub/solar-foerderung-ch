@@ -84,10 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Counter Animation ---
   function animateCounter(el) {
-    const target = parseInt(el.dataset.count || el.textContent.replace(/[^0-9]/g, ''));
+    const target = parseInt(el.dataset.count);
     if (!target) return;
-    const suffix = el.textContent.replace(/[0-9.,\s]/g, '');
-    const prefix = el.textContent.match(/^[^0-9]*/)?.[0] || '';
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
     let current = 0;
     const duration = 1500;
     const steps = 50;
@@ -104,6 +104,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }, stepTime);
   }
 
+  // --- Stat cards: animate in + count ---
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        const counter = entry.target.querySelector('.stat-value[data-count]');
+        if (counter) animateCounter(counter);
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.animate-stat').forEach(el => {
+    statObserver.observe(el);
+  });
+
+  // Fact numbers (non-stat counters)
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -113,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.5 });
 
-  document.querySelectorAll('.stat-value[data-count], .fact-number[data-count]').forEach(el => {
+  document.querySelectorAll('.fact-number[data-count]').forEach(el => {
     counterObserver.observe(el);
   });
 

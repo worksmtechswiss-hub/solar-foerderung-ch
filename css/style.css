@@ -228,17 +228,37 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   backdrop-filter: blur(8px);
 }
+.hero-stat .stat-icon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 8px;
+}
 .hero-stat .stat-value {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #06b6d4;
   display: block;
 }
 .hero-stat .stat-label {
-  font-size: .85rem;
-  color: rgba(255,255,255,.7);
-  margin-top: 4px;
+  font-size: .82rem;
+  color: rgba(255,255,255,.85);
+  margin-top: 6px;
+  font-weight: 500;
 }
+
+/* Stat card animation */
+.animate-stat {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.animate-stat.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-stat:nth-child(2) { transition-delay: .15s; }
+.animate-stat:nth-child(3) { transition-delay: .3s; }
+.animate-stat:nth-child(4) { transition-delay: .45s; }
 
 /* --- Sections --- */
 .section { padding: 90px 0; }

@@ -119,19 +119,23 @@
       <a href="#eiv" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff;">EIV-Übersicht &darr;</a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="stat-value" data-count="350">CHF 350</span>
+      <div class="hero-stat animate-stat">
+        <span class="stat-icon">💰</span>
+        <span class="stat-value" data-count="350" data-prefix="CHF ">CHF 350</span>
         <span class="stat-label">EIV Grundbeitrag</span>
       </div>
-      <div class="hero-stat">
-        <span class="stat-value" data-count="320">CHF 320</span>
-        <span class="stat-label">pro kWp Leistungsbeitrag</span>
+      <div class="hero-stat animate-stat">
+        <span class="stat-icon">⚡</span>
+        <span class="stat-value" data-count="320" data-prefix="CHF " data-suffix="/kWp">CHF 320/kWp</span>
+        <span class="stat-label">Leistungsbeitrag</span>
       </div>
-      <div class="hero-stat">
-        <span class="stat-value" data-count="100">100%</span>
+      <div class="hero-stat animate-stat">
+        <span class="stat-icon">📋</span>
+        <span class="stat-value" data-count="100" data-suffix="%">100%</span>
         <span class="stat-label">Steuerlich absetzbar</span>
       </div>
-      <div class="hero-stat">
+      <div class="hero-stat animate-stat">
+        <span class="stat-icon">🏔️</span>
         <span class="stat-value" data-count="26">26</span>
         <span class="stat-label">Kantone mit Programmen</span>
       </div>
@@ -150,49 +154,48 @@
     </div>
 
     <div class="grid-2">
-      <div class="table-wrap">
-        <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;"><table class="data-table">
+      <div class="table-wrap" style="font-size:.88rem;">
+        <table class="data-table" style="font-size:.85rem;">
           <thead>
             <tr>
-              <th>Anlagengrösse</th>
-              <th>Grundbeitrag</th>
-              <th>Leistungsbeitrag</th>
-              <th>Total (Beispiel)</th>
+              <th>Anlage</th>
+              <th>Grund</th>
+              <th>kWp</th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>2 – 5 kWp (KLEIV)</td>
-              <td>CHF 350</td>
-              <td class="amount">CHF 320/kWp</td>
-              <td class="amount">CHF 1'950 (5 kWp)</td>
+              <td>2–5 kWp</td>
+              <td>350</td>
+              <td class="amount">320</td>
+              <td class="amount">1'950</td>
             </tr>
             <tr>
-              <td>5 – 10 kWp (KLEIV)</td>
-              <td>CHF 350</td>
-              <td class="amount">CHF 320/kWp</td>
-              <td class="amount">CHF 3'550 (10 kWp)</td>
+              <td>5–10 kWp</td>
+              <td>350</td>
+              <td class="amount">320</td>
+              <td class="amount">3'550</td>
             </tr>
             <tr>
-              <td>10 – 30 kWp (KLEIV)</td>
-              <td>CHF 350</td>
-              <td class="amount">CHF 320/kWp</td>
-              <td class="amount">CHF 9'950 (30 kWp)</td>
+              <td>10–30 kWp</td>
+              <td>350</td>
+              <td class="amount">320</td>
+              <td class="amount">9'950</td>
             </tr>
             <tr class="highlight-row">
-              <td>30 – 100 kWp (KLEIV)</td>
-              <td>CHF 350</td>
-              <td class="amount">CHF 320/kWp</td>
-              <td class="amount">CHF 32'350 (100 kWp)</td>
+              <td>30–100 kWp</td>
+              <td>350</td>
+              <td class="amount">320</td>
+              <td class="amount">32'350</td>
             </tr>
             <tr>
-              <td>&gt; 100 kWp (GREIV)</td>
-              <td colspan="2">Auktionsverfahren / Einzelfallprüfung</td>
+              <td>&gt;100 kWp</td>
+              <td colspan="2">Auktion</td>
               <td class="amount">Variabel</td>
             </tr>
           </tbody>
-        </table></div>
-        <div class="table-note">⚠ Tarife gültig ab 1. April 2025 [STAND: bitte aktuell prüfen bei <a href="https://pronovo.ch" target="_blank" rel="noopener" style="color:#7c3aed;text-decoration:underline;">Pronovo</a> / <a href="https://www.bfe.admin.ch" target="_blank" rel="noopener" style="color:#7c3aed;text-decoration:underline;">BFE</a>]. Förderbeträge können sich jederzeit ändern. Angaben ohne Gewähr.</div>
+        </table>
       </div>
 
       <div>
@@ -503,7 +506,7 @@
 
     <div class="blog-grid">
       <a href="blog/einmalverguetung-eiv-pronovo-anleitung.html" class="blog-card">
-        <div class="blog-card-image" style="background:linear-gradient(135deg,#4c1d95,#7c3aed);">&#9889;</div>
+        <div class="blog-card-image"><img src="images/blog/blog-photo-1.jpg" alt="Solaranlage Schweiz" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="blog-card-body">
           <span class="badge badge-purple">EIV</span>
           <h3>Einmalvergütung (EIV): Pronovo Anmeldung Schritt für Schritt</h3>
@@ -512,7 +515,7 @@
         </div>
       </a>
       <a href="blog/solarfoerderung-kanton-zuerich-2026.html" class="blog-card">
-        <div class="blog-card-image" style="background:linear-gradient(135deg,#312e81,#6d28d9);">&#127968;</div>
+        <div class="blog-card-image"><img src="images/blog/blog-photo-2.jpg" alt="Photovoltaik Zürich" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="blog-card-body">
           <span class="badge badge-cyan">Kanton ZH</span>
           <h3>Solarförderung Kanton Zürich 2026: Alle Programme</h3>
@@ -521,7 +524,7 @@
         </div>
       </a>
       <a href="blog/solaranlage-steuerabzug-so-gehts.html" class="blog-card">
-        <div class="blog-card-image" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">&#128176;</div>
+        <div class="blog-card-image"><img src="images/blog/blog-photo-3.jpg" alt="Steuerabzug Solar" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="blog-card-body">
           <span class="badge badge-green">Steuern</span>
           <h3>Solaranlage von den Steuern abziehen: Anleitung</h3>
@@ -530,7 +533,7 @@
         </div>
       </a>
       <a href="blog/foerderung-batteriespeicher-schweiz.html" class="blog-card">
-        <div class="blog-card-image" style="background:linear-gradient(135deg,#4c1d95,#7c3aed);">&#128267;</div>
+        <div class="blog-card-image"><img src="images/blog/blog-photo-4.jpg" alt="Batteriespeicher" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="blog-card-body">
           <span class="badge badge-purple">Batterie</span>
           <h3>Förderung Batteriespeicher Schweiz 2026</h3>
@@ -539,7 +542,7 @@
         </div>
       </a>
       <a href="blog/gebaeupdeprogramm-schweiz-2026.html" class="blog-card">
-        <div class="blog-card-image" style="background:linear-gradient(135deg,#312e81,#4c1d95);">&#127970;</div>
+        <div class="blog-card-image"><img src="images/blog/blog-photo-5.jpg" alt="Gebäudeprogramm" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="blog-card-body">
           <span class="badge badge-cyan">Gebäude</span>
           <h3>Das Gebäudeprogramm 2026: Förderung komplett erklärt</h3>
@@ -548,7 +551,7 @@
         </div>
       </a>
       <a href="blog/foerderantrag-fehler-vermeiden.html" class="blog-card">
-        <div class="blog-card-image" style="background:linear-gradient(135deg,#6d28d9,#a855f7);">&#9888;</div>
+        <div class="blog-card-image"><img src="images/blog/blog-photo-6.jpg" alt="Förderantrag Tipps" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="blog-card-body">
           <span class="badge badge-purple">Tipps</span>
           <h3>Förderantrag Solar: 10 häufige Fehler vermeiden</h3>
@@ -648,7 +651,7 @@
     <p>Nutzen Sie unseren Rechner und erfahren Sie, wie viel Unterstützung Sie in Ihrem Kanton erhalten.</p>
     <div class="cta-buttons">
       <a href="https://www.pv-rechner.ch" target="_blank" rel="noopener" class="btn btn-cyan btn-lg">Jetzt berechnen &rarr;</a>
-      <a href="blog.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff;">Ratgeber lesen</a>
+      <a href="blog.html" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.4);backdrop-filter:blur(4px);">Ratgeber lesen</a>
     </div>
   </div>
 </section>
